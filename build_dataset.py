@@ -4,8 +4,6 @@ import glob
 
 import pandas as pd
 
-from annotation_frametime import round_frametime
-
 main_folder = pathlib.Path(__file__).parent.absolute()
 dataset_video_folder = os.path.join(main_folder, 'dataset', 'video')
 feature_type_dict = {
