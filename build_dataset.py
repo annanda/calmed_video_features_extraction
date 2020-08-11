@@ -13,6 +13,7 @@ feature_type_dict = {
     'head_pose': {'start': 'pose_Tx', 'end': 'pose_Rz'},
     'face_2d_landmarks': {'start': 'x_0', 'end': 'y_67'},
     'face_3d_landmarks': {'start': 'X_0', 'end': 'Z_67'},
+    'AU': {'start': 'AU01_r', 'end': 'AU45_c'}
 }
 
 
@@ -43,5 +44,5 @@ def extract_features_all_files(feature_type):
 
 
 if __name__ == '__main__':
-    feature_type = 'face_3d_landmarks'
+    feature_type = 'AU'
     extract_features_all_files(feature_type)
