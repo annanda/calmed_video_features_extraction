@@ -16,19 +16,25 @@ def set_window_size_bigger():
     df = df.assign(
         timestamp=df['timestamp'].map(lambda x: round(base * round(x / base), 2))
     )
+    between = 0
     for index, row in df.iterrows():
         if row['timestamp'] == 0.0:
             print('It is zero')
             continue
         # timestamp = fix_window_size_timestamp(row['timestamp'])
         value = row['timestamp']
-        if find_window_multiples(value):
+        if is_window_multiples(value):
             print(f'multiple of 0.4: {value}')
+            print(f'number of values between: {between}')
+            if between != 9:
+                print('##################################################### \n ALERTTTTTT')
+            between = 0
         else:
             print(f'NOT multiple of 0.4: {value}')
+            between += 1
 
 
-def find_window_multiples(number):
+def is_window_multiples(number):
     number = round(number * 100)
     return (number % 40) == 0
 
