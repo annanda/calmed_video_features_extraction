@@ -1,0 +1,10 @@
+version: '3'
+services:
+  open-smile:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "opensmile:latest"
+    volumes:
+      - ./open_smile:/root/open_smile
+    entrypoint: /bin/sh -c

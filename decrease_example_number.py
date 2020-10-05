@@ -44,5 +44,5 @@ def is_window_multiples(number):
 # multiples = absolute(float_range % 0.2) < 1e-13
 # # now multiples is a boolean array
 # print(float_range[multiples])
-set_window_size_bigger()
-# print(find_window_multiples(298.4))
+# set_window_size_bigger()
+print(is_window_multiples(298.4))
