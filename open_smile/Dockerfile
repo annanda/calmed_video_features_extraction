@@ -13,4 +13,5 @@ RUN apt-get update -qq &&\
 WORKDIR /open_smile
 
 COPY ./opensmile-2.3.0 ./
+COPY ./dataset_files ./dataset_files
 RUN cp bin/linux_x64_standalone_static/SMILExtract /usr/local/bin/

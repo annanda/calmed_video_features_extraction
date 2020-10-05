@@ -6,5 +6,5 @@ services:
       dockerfile: Dockerfile
     image: "opensmile:latest"
     volumes:
-      - ./open_smile:/root/open_smile
+      - ./output:/open_smile/output
     entrypoint: /bin/sh -c
