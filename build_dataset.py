@@ -44,5 +44,5 @@ def extract_features_all_files(feature_type):
 
 
 if __name__ == '__main__':
-    feature_type = 'AU'
+    feature_type = 'face_3d_landmarks'
     extract_features_all_files(feature_type)
