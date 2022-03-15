@@ -1,4 +1,11 @@
 /processed/*
 /.idea/*
-/processed_csv/*
+/processed_csv/*.csv
 /open_smile/opensmile-2.3.0/
+/dataset/video/AU/*.csv
+/dataset/video/gaze/*.csv
+/dataset/video/2d_eye_landmark/*.csv
+/dataset/video/3d_eye_landmark/*.csv
+/dataset/video/head_pose/*.csv
+/dataset/video/face_2d_landmarks/*.csv
+/dataset/video/face_3d_landmarks/*.csv
