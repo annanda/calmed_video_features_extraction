@@ -6,6 +6,7 @@ import pandas as pd
 
 main_folder = pathlib.Path(__file__).parent.absolute()
 dataset_video_folder = os.path.join(main_folder, 'dataset', 'video')
+
 feature_type_dict = {
     'gaze': {'start': 'gaze_0_x', 'end': 'gaze_angle_y'},
     '2d_eye_landmark': {'start': 'eye_lmk_x_0', 'end': 'eye_lmk_y_55'},
@@ -44,5 +45,11 @@ def extract_features_all_files(feature_type):
 
 
 if __name__ == '__main__':
-    feature_type = 'face_3d_landmarks'
-    extract_features_all_files(feature_type)
+    # feature_type = 'gaze'
+    # extract_features_all_files(feature_type)
+
+    features = ['gaze', '2d_eye_landmark', '3d_eye_landmark', 'head_pose', 'face_2d_landmarks', 'face_3d_landmarks',
+                'AU']
+
+    for feature in features:
+        extract_features_all_files(feature)
