@@ -19,7 +19,7 @@ number 1.
    function ```extract_all_features_from_session()``` on the ```build_dataset.py``` file.
 3. You can also create working dataset for a specific feature by running the function ```extract_features()``` on
    the ```build_dataset.py``` file.
-    * Types of features supported:
+    * Types of features supported for video:
         * AU
         * gaze
         * 2d_eye_landmark

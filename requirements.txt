@@ -1,0 +1,3 @@
+python-decouple==3.6
+pandas
+-e file:./#egg=dataset_creation_from_features

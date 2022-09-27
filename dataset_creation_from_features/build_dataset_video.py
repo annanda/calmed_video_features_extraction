@@ -2,7 +2,8 @@ import os.path
 
 import pandas as pd
 
-from setup.conf import DATASET_VIDEO_FOLDER, PROCESSED_VIDEO_CSV_FOLDER, FEATURE_TYPE_DICT, FEATURES_VIDEO
+from dataset_creation_from_features.conf import DATASET_VIDEO_FOLDER, PROCESSED_VIDEO_CSV_FOLDER, FEATURE_TYPE_DICT, \
+    FEATURES_VIDEO
 
 
 def extract_features(session, feature_type):
@@ -37,7 +38,7 @@ def extract_all_features_from_session(session):
 
 
 if __name__ == '__main__':
-    session_number = 'session_01_01'
+    session_number = 'session_04_01'
     # To extract all video features from a session use the function below
     extract_all_features_from_session(session_number)
 
