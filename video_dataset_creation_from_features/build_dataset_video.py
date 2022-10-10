@@ -2,7 +2,7 @@ import os.path
 
 import pandas as pd
 
-from dataset_creation_from_features.conf import DATASET_VIDEO_FOLDER, PROCESSED_VIDEO_CSV_FOLDER, FEATURE_TYPE_DICT, \
+from configs.conf import DATASET_VIDEO_FOLDER, PROCESSED_VIDEO_CSV_FOLDER, FEATURE_TYPE_DICT, \
     FEATURES_VIDEO
 
 
