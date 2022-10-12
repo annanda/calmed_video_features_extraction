@@ -3,13 +3,34 @@ import os.path
 
 from decouple import config
 
+SESSION_PARTS = {
+    'session_01_01': ['session_01_01_01', 'session_01_01_02', 'session_01_01_03', 'session_01_01_04',
+                      'session_01_01_05', 'session_01_01_06', 'session_01_01_07'],
+    'session_02_01': ['session_02_01_01', 'session_02_01_02', 'session_02_01_03', 'session_02_01_04',
+                      'session_02_01_05', 'session_02_01_06'],
+    'session_02_02': ['session_02_02_01', 'session_02_02_02', 'session_02_02_03', 'session_02_02_04',
+                      'session_02_02_05', 'session_02_02_06'],
+    'session_03_01': ['session_03_01_01', 'session_03_01_02', 'session_03_01_03', 'session_03_01_04',
+                      'session_03_01_05', 'session_03_01_06', 'session_03_01_07'],
+    'session_03_02': ['session_03_02_01', 'session_03_02_02', 'session_03_02_03', 'session_03_02_04',
+                      'session_03_02_05', 'session_03_02_06'],
+    'session_04_01': ['session_04_01_01', 'session_04_01_02', 'session_04_01_03', 'session_04_01_04',
+                      'session_04_01_05'],
+    'session_04_02': ['session_04_02_01', 'session_04_02_02', 'session_04_02_03', 'session_04_02_04',
+                      'session_04_02_05'],
+}
+
 main_folder = pathlib.Path(__file__).parent.parent.absolute()
 dataset_video_folder = os.path.join(main_folder, 'dataset', 'video')
+dataset_audio_folder = os.path.join(main_folder, 'dataset', 'audio')
 processed_video_csv_folder = os.path.join(main_folder, 'processed_csv', 'video')
+open_smile_dataset_folder = os.path.join(main_folder, 'open_smile_all_output')
 
 MAIN_FOLDER = config('MAIN_FOLDER', default=main_folder)
 DATASET_VIDEO_FOLDER = config('DATASET_VIDEO_FOLDER', default=dataset_video_folder)
+DATASET_AUDIO_FOLDER = config('DATASET_AUDIO_FOLDER', default=dataset_audio_folder)
 PROCESSED_VIDEO_CSV_FOLDER = config('PROCESSED_VIDEO_CSV_FOLDER', default=processed_video_csv_folder)
+OPEN_SMILE_DATASET_FOLDER = config('OPEN_SMILE_DATASET_FOLDER', default=open_smile_dataset_folder)
 
 # FEATURES VIDEO VALUES
 FEATURE_TYPE_DICT = {
@@ -104,7 +125,7 @@ AUDIO_PARAMETER_FEATURES_GROUPS = {
     },
     'temporal_features': {
         'intervals': [('VoicedSegmentsPerSec', 'equivalentSoundLevel_dBp')],
-        'llds': ['']
+        'llds': []
     }
 
 }
@@ -117,3 +138,5 @@ LLD_PARAMETER_GROUP = {
                          'Harmonic_difference_H1–A3', 'mfcc_1–4'],
     'temporal_features': ['temporal_features']
 }
+
+AUDIO_FEATURES_LEVELS = ['llds', 'functionals', 'llds_deltas']
