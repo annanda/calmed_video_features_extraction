@@ -73,15 +73,15 @@ class AudioDatasetCreator:
                 self.write_csv_dataset(final, session_part, feature_in_group)
 
 
-def generate_features_all_sessions():
+def generate_features_all_sessions(feature_group):
     for session in SESSION_PARTS.keys():
-        audio_ds_creator = AudioDatasetCreator(session, feature_group='frequency')
+        audio_ds_creator = AudioDatasetCreator(session, feature_group=feature_group)
         audio_ds_creator.generate_features()
 
 
 if __name__ == '__main__':
-    session_number = 'session_04_02'
-    audio_dataset_creator = AudioDatasetCreator(session_number, feature_group='frequency')
-    audio_dataset_creator.generate_features()
-
-    # generate_features_all_sessions()
+    # session_number = 'session_04_02'
+    # audio_dataset_creator = AudioDatasetCreator(session_number, feature_group='temporal_features')
+    # audio_dataset_creator.generate_features()
+    feature_group_type = 'temporal_features'
+    generate_features_all_sessions(feature_group_type)
