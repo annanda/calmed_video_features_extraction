@@ -9,7 +9,7 @@ features, to help to work with features selection for a machine learning model.
 It also round the timestamp, so it
 becomes increments of 0.04 seconds, to be consistent throughout the dataset timestamp.
 
-### How to use it
+## User Manual
 
 **The format for a session number is:** ```session_XX_YY```. Where XX represents the participant's number and YY
 represents the session number for the participant, e.g., ```session_01_01``` refer to the first session with participant
@@ -32,11 +32,11 @@ number 1.
 
 The output is saved on the ```dataset/video/{{feature_type}}/{{session_number}}``` folder.
 
-## Generate working dataset for all supported features
+### Generate working dataset for all supported features
 
 1. Run ```extract_all_features_from_session({{session_number}})``` function on the ```build_dataset.py``` file.
 
-## Generate working dataset for a specific features from one session
+### Generate working dataset for a specific features from one session
 
 1. Run the function ```extract_features({{session_number}}, {{feature}})``` on the ```build_dataset.py``` file.
 
