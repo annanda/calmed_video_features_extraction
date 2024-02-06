@@ -1,8 +1,10 @@
 # Features Extraction
 
-This project works with the output of the OpenFace project to separate the extracted features into organised categories.
+This project works with the output of the OpenFace and OpenSMILE models to separate the extracted features into
+organised categories.
 
-OpenFace extracts all the possible features, this project separated each feature type into a different dataset of
+OpenFace/OpenSMILE extract all the available features, this project separated each feature type into a different dataset
+of
 features, to help to work with features selection for a machine learning model.
 It also round the timestamp, so it
 becomes increments of 0.04 seconds, to be consistent throughout the dataset timestamp.
@@ -37,3 +39,20 @@ The output is saved on the ```dataset/video/{{feature_type}}/{{session_number}}`
 ## Generate working dataset for a specific features from one session
 
 1. Run the function ```extract_features({{session_number}}, {{feature}})``` on the ```build_dataset.py``` file.
+
+## Licence
+
+This repository is released for **non-commercial use only** under
+the [3-Cause BSD Licence](https://opensource.org/license/bsd-3-clause/).
+
+Please refer to [LICENSE.md](LICENSE.md) file for details on the licence.
+
+You must comply with OpenFace and OpenSMILE licenses.
+
+----
+
+Author: Annanda Sousa
+
+Author's contact: [annanda.sousa@gmail.com](mailto:annanda.sousa@gmail.com)
+
+----
