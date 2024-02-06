@@ -27,7 +27,6 @@ number 1.
         * head_pose
         * face_2d_landmarks
         * face_3d_landmark
-        *
 
 The output is saved on the ```dataset/video/{{feature_type}}/{{session_number}}``` folder.
 
