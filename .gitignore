@@ -4,3 +4,5 @@ processed_csv/*
 dataset/*
 open_face_all_output/*
 open_smile_all_output/*
+/checking_files_diff.py
+/copy_files_open_face_01_01.sh
